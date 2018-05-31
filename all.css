@@ -11,14 +11,14 @@ html {
 
 .wrap {
    height: 100vh;
-   background-color: rgb(235, 197, 155);
+   background-color: #FFFFFF;
    overflow-x: hidden;
    margin: 0px auto;
 }
 
 .random_Area {
    position: relative;
-   background-color: rgb(248, 169, 177);
+   background-color: #326273;
 }
 
 button {
@@ -26,7 +26,7 @@ button {
     height: 4rem;
     transform: translateX(-50%);
     box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
-    background-color: rgb(255, 105, 120);
+    background-color: #E39774;
     color: rgb(236, 240, 241);
     margin: 1rem 50%;
     overflow: hidden;
@@ -40,16 +40,15 @@ button {
 }
 
 button:hover {
-   background-color: rgb(250, 87, 104);
-     box-shadow: 0 5px #666;
+   background-color: rgb(247, 175, 142);
+    box-shadow: 0 5px #666;
 
 }
 
 .dropDown_Area {
    display: flex;
    justify-content: center;
-   background-color: rgb(238, 159, 80);
-   align-items: center;
+    align-items: center;
    padding: 1rem 0px;
 }
 
@@ -63,31 +62,43 @@ button:hover {
 }
 
 .storeItem_Area {
-   background-color: rgb(233, 168, 104);
+   background-color: #EEEEEE;
    display: flex;
    flex-wrap: wrap;
+   padding: 3rem;
+   justify-content: center;
+   align-items: center;
 }
 
 .storeItem_Area .storeItem {
-   width: 20%;
-   box-sizing: border-box;
-   cursor: pointer;
-   margin: 0;
-   text-align: center;
-   border-width: 1rem;
-   border-style: solid;
-   border-color: rgb(255, 94, 0);
-   animation: show 1s forwards;
-   transform-origin: center bottom;
+  width: 20%;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 0.5rem;
+  text-align: center;
+  animation: show 1s forwards;
+  transform-origin: center bottom;
+  border: solid 2px black;
+  background-color: #5C9EAD;
+  box-shadow: 0 10px 6px -6px #777;
+  border-radius: 10px;
+
 }
 .storeItem h2{
   margin: 0;
+  padding:1rem;
 }
-.storeItem .top_detail{
-  background-color: rgb(255, 94, 0);
-}
-.storeItem img{
+
+
+
+.storeItem .myImg {
+  background-image: url("pc.jpg");
   width: 100%;
+  height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 @keyframes show {
    0% {
@@ -367,5 +378,16 @@ button:hover {
   border-bottom-left-radius: 70% 120%;
 }
 
+#footer {
+  z-index: 100;
+  position: fixed;
+  bottom: 0px;
+  margin: 0 auto;
+  height: 50px;
+  width: 100%;
+  background-image: linear-gradient(-135deg, transparent 50%, #6AC5F6 50%),
+  linear-gradient(-45deg, rgb(49, 182, 212) 50%, transparent 50%);
+  background-size: 50px 50px;
+}
 
 /* //select */

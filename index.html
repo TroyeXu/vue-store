@@ -60,15 +60,15 @@
                     <option v-for="item in sTime" :value="item">{{item}}</option>
                 </select>
             </div>
-            <div class="storeItem_Area">
+            <div class="storeItem_Area background">
                 <div class="storeItem " v-for="item in store_list" @click="show_Modal"
                 v-show=dataFilter(isShow)>
                 <!-- v-show=priceFilter(item.price) -->
-                    <div class="top_detail">
+                    <div class="top_detail ">
                         <h2>{{item.id}}</h2>
-                    <img src="https://picsum.photos/250/150" id="myImg" alt="test">
+                    <div class="myImg" alt="test"></div>
                     </div>
-                        <div class="down_detail" >
+                        <div class="down_detail "  >
                         <h4>價格：{{ item.price }}</h4>
                         <h4>外送：{{item.delivery}}</h4>
                         <h4>距離：{{item.distance}}</h4>
@@ -79,11 +79,19 @@
             </div>
         </div>
     </div>
+     <footer id="footer"></div>
+</footer>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    
+    <script src="https://www.jqueryscript.net/demo/jQuery-Plugin-To-Create-Interactive-Polygon-Background-Geometryangle/geometryangle.js"></script>
     <script src="all.js"></script>
+    <script>
+        
+    </script>
     <script type="module">
-        import baseData from '/data.js'
+        import baseData from '../data.js'
         var app = new Vue({
             el: "#app",
             data: {
@@ -204,7 +212,7 @@
                 }
             }
         })
-
+    
                 
     </script>
 </body>
