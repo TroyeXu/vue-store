@@ -37,6 +37,7 @@
                 </div>
             </div>
                 <button  @click="get_RStore">隨機</button>
+                <button @click="get_Re">重置</button>
             </div>
             <div class="dropDown_Area">
                 <label>價格</label>
@@ -94,6 +95,7 @@
             data: {
                 //all-data 
                 store_list:baseData,
+                base_data:baseData,
                 //select-原data
                 sPrice: [],
                 sDelivery: [],
@@ -127,13 +129,19 @@
                     this.selectedType = "全部";
                     this.selectedTime = "全部";
                 },
+                get_Re:function(){
+                    this.store_list=baseData;
+
+                },
                 get_RStore: function () {
-                    let tmpStoreList = baseData;
-                    let storeLengR = this.getRandomInt(baseData.length);
-                    tmpStoreList = baseData[storeLengR];
-                    app.store_list = [tmpStoreList];
-            
-                   
+                    let objStore= {data:this.store_list};
+                    let copy_objStore=Object.assign({},objStore);
+                    let storeLengR= this.getRandomInt(this.store_list.length);
+                    copy_objStore=objStore.data[storeLengR];
+                    this.store_list=[copy_objStore];
+
+
+                    
                 },
                 select_Price: function () {     
                     let tmpStoreList=baseData;

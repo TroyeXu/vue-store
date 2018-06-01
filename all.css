@@ -13,22 +13,24 @@ html {
    height: 100vh;
    background-color: #FFFFFF;
    overflow-x: hidden;
-   margin: 0px auto;
+   margin: 0 auto;
 }
 
 .random_Area {
-   position: relative;
    background-color: #326273;
+   padding: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 button {
-    width: 4rem;
-    height: 4rem;
-    transform: translateX(-50%);
+    font-family: 微軟正黑體;
+    font-size: 4rem;;
+    padding: 5rem;
     box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
     background-color: #E39774;
     color: rgb(236, 240, 241);
-    margin: 1rem 50%;
     overflow: hidden;
     border-width: 0px;
     outline: none;
@@ -36,7 +38,7 @@ button {
     box-shadow: 0 5px #999;
     transition: all 0.3s;
     cursor: pointer;
-    
+    margin-left : 2rem
 }
 
 button:hover {
