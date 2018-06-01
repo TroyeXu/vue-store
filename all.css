@@ -4,54 +4,53 @@
 
 body,
 html {
-   margin: 0;
-   padding: 0;
-   
+  margin: 0;
+  padding: 0;
 }
 
 .wrap {
-   height: 100vh;
-   background-color: #FFFFFF;
-   overflow-x: hidden;
-   margin: 0 auto;
+  height: 100vh;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  margin: 0 auto;
 }
 
 .random_Area {
-   background-color: #326273;
-   padding: 2rem;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  background-color: #326273;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
-    font-family: 微軟正黑體;
-    font-size: 4rem;;
-    padding: 5rem;
-    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
-    background-color: #E39774;
-    color: rgb(236, 240, 241);
-    overflow: hidden;
-    border-width: 0px;
-    outline: none;
-    border-radius: 2px;  
-    box-shadow: 0 5px #999;
-    transition: all 0.3s;
-    cursor: pointer;
-    margin-left : 2rem
+  font-family: 微軟正黑體;
+  font-size: 4rem;
+  ;
+  padding: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
+  background-color: #E39774;
+  color: rgb(236, 240, 241);
+  overflow: hidden;
+  border-width: 0px;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 5px #999;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-left: 2rem
 }
 
 button:hover {
-   background-color: rgb(247, 175, 142);
-    box-shadow: 0 5px #666;
-
+  background-color: rgb(247, 175, 142);
+  box-shadow: 0 5px #666;
 }
 
 .dropDown_Area {
-   display: flex;
-   justify-content: center;
-    align-items: center;
-   padding: 1rem 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0px;
 }
 
 .dropDown_Area label {
@@ -59,17 +58,17 @@ button:hover {
 }
 
 .dropDown_Area select {
-   width: 10%;
-   height: 3rem;
+  width: 10%;
+  height: 3rem;
 }
 
 .storeItem_Area {
-   background-color: #EEEEEE;
-   display: flex;
-   flex-wrap: wrap;
-   padding: 3rem;
-   justify-content: center;
-   align-items: center;
+  background-color: #EEEEEE;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .storeItem_Area .storeItem {
@@ -85,34 +84,34 @@ button:hover {
   box-shadow: 0 10px 6px -6px #777;
   border-radius: 10px;
   transition: all 1s;
+}
 
+.storeItem:hover {
+  border-radius: 50% 10% 50% /22% 30% 20%;
+  border: solid 4px black;
+  box-shadow: 20px 40px 26px -10px #777;
 }
-.storeItem:hover{
-    border-radius: 100px;
-}
-.storeItem h2{
+
+.storeItem h2 {
   margin: 0;
-  padding:1rem;
+  padding: 1rem;
 }
-
-
 
 .storeItem .myImg {
-  background-image: url("pc.jpg");
   width: 100%;
   height: 100px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
+
 @keyframes show {
-   0% {
-      opacity: 0;
-      transform: scale(0) rotateY(180deg) ;
-   }
-   100% {
-      opacity: 1;
-      transform: scale(1) rotateY(0deg);
-   }
+  0% {
+    opacity: 0;
+    transform: scale(0) rotateY(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+  }
 }

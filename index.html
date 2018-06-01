@@ -43,7 +43,7 @@
                 <!-- v-show=priceFilter(item.price) -->
                     <div class="top_detail ">
                         <h2>{{item.Id}}</h2>
-                    <div class="myImg" alt="test"></div>
+                        <div class="myImg" alt="test" v-bind:style="{ backgroundImage: 'url(' + item.url + ')' }"></div>
                     </div>
                         <div class="down_detail "  >
                         <h4>價格：{{ item.price }}</h4>
