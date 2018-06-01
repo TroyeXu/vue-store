@@ -3,5 +3,4 @@ $(document).ready(function () {
         opacity: 0.25,
         height: "toggle"
     }, 3000)
-    
 });

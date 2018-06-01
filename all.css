@@ -82,7 +82,11 @@ button:hover {
   background-color: #5C9EAD;
   box-shadow: 0 10px 6px -6px #777;
   border-radius: 10px;
+  transition: all 1s;
 
+}
+.storeItem:hover{
+    border-radius: 100px;
 }
 .storeItem h2{
   margin: 0;
@@ -391,3 +395,6 @@ button:hover {
 }
 
 /* //select */
+
+
+/* scroll */

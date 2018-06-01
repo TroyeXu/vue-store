@@ -65,7 +65,7 @@
                 v-show=dataFilter(isShow)>
                 <!-- v-show=priceFilter(item.price) -->
                     <div class="top_detail ">
-                        <h2>{{item.id}}</h2>
+                        <h2>{{item.Id}}</h2>
                     <div class="myImg" alt="test"></div>
                     </div>
                         <div class="down_detail "  >
@@ -79,19 +79,16 @@
             </div>
         </div>
     </div>
-     <footer id="footer"></div>
-</footer>
+     <footer id="footer"></footer>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
     
     <script src="https://www.jqueryscript.net/demo/jQuery-Plugin-To-Create-Interactive-Polygon-Background-Geometryangle/geometryangle.js"></script>
-    <script src="all.js"></script>
-    <script>
-        
+    <script src="all.js"></script>        
     </script>
     <script type="module">
-        import baseData from '../data.js'
+        import baseData from './data.js'
         var app = new Vue({
             el: "#app",
             data: {
@@ -120,9 +117,9 @@
                     //select-data 
                     this.sPrice= ["全部","100以內", "100~200", "200~300", "300以上"]; 
                     this.sDelivery=["全部","O", "X"];
-                    this.sDistance=["全部","校內","騎車10分鐘", "騎車10分以上"];
+                    this.sDistance=["全部","校內","騎車10分鐘", "騎車10分鐘以上"];
                     this.sType= ["全部","便當", "甜點咖啡", "火鍋烤肉", "麵", "飯", "異國料理", "素食", "其他", "飲料", "小吃"]; 
-                    this.sTime=["全部","早","中", "晚"]
+                    this.sTime=["全部","早","中", "晚","宵"]
                     //給予select-value
                     this.selectedPrice = "全部";
                     this.selectedDelivery = "全部";
@@ -131,10 +128,12 @@
                     this.selectedTime = "全部";
                 },
                 get_RStore: function () {
-                    let tmpStoreList=baseData;
-                    let storeLengR=this.getRandomInt(baseData.length);
+                    let tmpStoreList = baseData;
+                    let storeLengR = this.getRandomInt(baseData.length);
                     tmpStoreList = baseData[storeLengR];
-                    app.store_list=[tmpStoreList];                    
+                    app.store_list = [tmpStoreList];
+            
+                   
                 },
                 select_Price: function () {     
                     let tmpStoreList=baseData;
