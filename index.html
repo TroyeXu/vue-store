@@ -116,7 +116,7 @@
                     this.store_list=[copy_objStore];
                 },
                 select_Price: function () {     
-                    let tmpStoreList=baseData;
+                    let tmpStoreList=this.store_list;
                     let result=[];
                     for(let i=0 ; i<tmpStoreList.length;i++){
                     if(tmpStoreList[i].price==this.selectedPrice){
@@ -128,7 +128,7 @@
                     this.store_list=result;
                 },
                 select_Distance: function () {
-                    let tmpStoreList=baseData;
+                    let tmpStoreList=this.store_list;
                     let result=[];
                     for(let i=0 ; i<tmpStoreList.length;i++){
                     if(tmpStoreList[i].distance==this.selectedDistance){
@@ -140,7 +140,7 @@
                     this.store_list=result;
                 },
                 select_Delivery: function () {
-                    let tmpStoreList=baseData; 
+                    let tmpStoreList=this.store_list; 
                     let result=[]; 
                     for(let i=0 ; i<tmpStoreList.length;i++){
                         if(tmpStoreList[i].delivery==this.selectedDelivery){
@@ -151,7 +151,7 @@
                     this.store_list=result;
                 },
                 select_Type: function () {
-                    let tmpStoreList=baseData; 
+                    let tmpStoreList=this.store_list; 
                     let result=[];
                     for(let i=0 ; i<tmpStoreList.length;i++){
                         let txtflag =tmpStoreList[i].type.indexOf(this.selectedType);
@@ -164,7 +164,7 @@
                     this.store_list=result;
                 },
                 select_Time: function () {
-                    let tmpStoreList=baseData; 
+                    let tmpStoreList=this.store_list; 
                     let result=[];
                     for(let i=0 ; i<tmpStoreList.length;i++){
                         let txtflag =tmpStoreList[i].hours.indexOf(this.selectedTime);
