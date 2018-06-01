@@ -5,7 +5,7 @@ const baseData = [{
             "delivery": "X",
             "type": ["飯", "麵", "異國料理"],
             "hours": ["中", "晚"],
-            "url":"./img/img1.png"
+            "url":"../img/img1.png"
         },
         {
             "Id": "2.麵堂拉麵",
@@ -14,7 +14,7 @@ const baseData = [{
             "delivery": "X",
             "type": ["麵", "異國料理"],
             "hours": ["中", "晚"],
-            "url": "./img/img2.png"
+            "url": "../img/img2.png"
         },
         {
             "Id": "3.茶bar",
@@ -23,7 +23,7 @@ const baseData = [{
             "delivery": "O",
             "type": "飲料",
             "hours": ["中", "晚"],
-            "url": "./img/img3.png"
+            "url": "../img/img3.png"
         },
         {
             "Id": "4.Who'S CAFÉ",
@@ -32,7 +32,7 @@ const baseData = [{
             "delivery": "X",
             "type": ["飲料", "甜點咖啡", "異國料理"],
             "hours": ["早", "中"],
-            "url": "./img/img4.png"
+            "url": "../img/img4.png"
 
         },
         {
@@ -42,7 +42,7 @@ const baseData = [{
             "delivery": "O",
             "type": ["飯", "麵"],
             "hours": ["中", "晚"],
-            "url": "./img/img5.png"
+            "url": "../img/img5.png"
 
         },
         {
@@ -52,7 +52,7 @@ const baseData = [{
             "delivery": "X",
             "type": ["麵", "異國料理"],
             "hours": ["早"],
-            "url": "./img/img6.png"
+            "url": "../img/img6.png"
 
         },
         {
@@ -62,7 +62,7 @@ const baseData = [{
             "delivery": "O",
             "type": ["飯", "麵", "異國料理", "便當"],
             "hours": ["中", "晚"],
-            "url": "./img/img7.png"
+            "url": "../img/img7.png"
 
         },
         {
@@ -72,7 +72,7 @@ const baseData = [{
             "delivery": "X",
             "type": ["飯", "異國料理"],
             "hours": ["中", "晚"],
-            "url": "./img/img8.png"
+            "url": "../img/img8.png"
         },
         {
             "Id": "9.粥仔魚",
@@ -81,7 +81,7 @@ const baseData = [{
             "delivery": "O",
             "type": ["飯", "麵"],
             "hours": ["中", "晚"],
-            "url": "./img/img9.png"
+            "url": "../img/img9.png"
         },
         {
             "Id": "10.上品精緻便當",
@@ -90,7 +90,7 @@ const baseData = [{
             "delivery": "O",
             "type": "便當",
             "hours": ["中", "晚"],
-            "url": "./img/img10.png"
+            "url": "../img/img10.png"
         },
         {
             "Id": "11.瑞迪印度廚房",
