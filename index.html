@@ -13,57 +13,33 @@
 <div id="app" v-cloak>
         <div class="wrap">
             <div class="random_Area">
-            <div class="man">
-                <div class="face">
-                    <div class="gloss"></div>
-                    <div class="eyebrows leftEyebrow"></div>
-                    <div class="eyebrows rightEyebrow"></div>
-                    <div class="eyes leftEye"></div>
-                    <div class="eyes rightEye"></div>
-                    <div class="eyeballs leftEyeball"></div>
-                    <div class="eyeballs rightEyeball"></div>
-                    <div class="nose">
-                        <div class="noseShadow1"></div>
-                        <div class="noseShadow2"></div>
-                        <div class="noseShadow3"></div>
-                        <div class="noseLine1"></div>
-                        <div class="noseLine2"></div>
-                    </div>
-                    <div class="ears leftEar"></div>
-                    <div class="ears rightEar"></div>
-                    <div class="earLines leftEarLine"></div>
-                    <div class="earLines rightEarLine"></div>
-                    <div class="mouth"></div>
-                </div>
-            </div>
                 <button  @click="get_RStore">隨機</button>
                 <button @click="get_Re">重置</button>
             </div>
-            <div class="dropDown_Area">
+            <div class="dropDown_Area" >
                 <label>價格</label>
-                <select   @change="select_Price" v-model="selectedPrice" v-on:change="conditionFilter">
+                <select   @change="select_Price" v-model="selectedPrice">
                     <option v-for="item in sPrice" :value="item" v-bind:selected="item === '100以內'">{{item}}</option>
                 </select>
                 <label>距離</label>
-                <select @change="select_Distance" v-model="selectedDistance" v-on:change="conditionFilter">
+                <select @change="select_Distance" v-model="selectedDistance">
                     <option v-for="item in sDistance" :value="item">{{item}}</option>
                 </select>
                 <label>外送</label>
-                <select @change="select_Delivery" v-model="selectedDelivery" v-on:change="conditionFilter">
+                <select @change="select_Delivery" v-model="selectedDelivery">
                     <option v-for="item in sDelivery" :value="item">{{item}}</option>
                 </select>
                 <label>食物類型</label>
-                <select @change="select_Type" v-model="selectedType" v-on:change="conditionFilter">
+                <select @change="select_Type" v-model="selectedType">
                     <option v-for="item in sType" :value="item">{{item}}</option>
                 </select>
                 <label>時間</label>
-                <select @change="select_Time" v-model="selectedTime" v-on:change="conditionFilter">
+                <select @change="select_Time" v-model="selectedTime">
                     <option v-for="item in sTime" :value="item">{{item}}</option>
                 </select>
             </div>
             <div class="storeItem_Area background">
-                <div class="storeItem " v-for="item in store_list" @click="show_Modal"
-                v-show=dataFilter(isShow)>
+                <div class="storeItem " v-for="item in store_list" >
                 <!-- v-show=priceFilter(item.price) -->
                     <div class="top_detail ">
                         <h2>{{item.Id}}</h2>
@@ -95,7 +71,6 @@
             data: {
                 //all-data 
                 store_list:baseData,
-                base_data:baseData,
                 //select-原data
                 sPrice: [],
                 sDelivery: [],
@@ -139,9 +114,6 @@
                     let storeLengR= this.getRandomInt(this.store_list.length);
                     copy_objStore=objStore.data[storeLengR];
                     this.store_list=[copy_objStore];
-
-
-                    
                 },
                 select_Price: function () {     
                     let tmpStoreList=baseData;
@@ -153,7 +125,7 @@
                             result=tmpStoreList;
                         }
                     }
-                    app.store_list=result;
+                    this.store_list=result;
                 },
                 select_Distance: function () {
                     let tmpStoreList=baseData;
@@ -165,7 +137,7 @@
                             result=tmpStoreList;
                         }
                     }
-                    app.store_list=result;
+                    this.store_list=result;
                 },
                 select_Delivery: function () {
                     let tmpStoreList=baseData; 
@@ -176,7 +148,7 @@
                         }else if(this.selectedDelivery=="全部" ){
                         result=tmpStoreList; }
                     }
-                    app.store_list=result;
+                    this.store_list=result;
                 },
                 select_Type: function () {
                     let tmpStoreList=baseData; 
@@ -189,7 +161,7 @@
                             result=tmpStoreList; 
                         }
                     }
-                    app.store_list=result;
+                    this.store_list=result;
                 },
                 select_Time: function () {
                     let tmpStoreList=baseData; 
@@ -202,20 +174,12 @@
                             result=tmpStoreList; 
                         }
                     }
-                    app.store_list=result;
-                },
-                show_Modal: function () {
-
-                },
-                dataFilter(flag) {
-                    let result =true ;
-                    return result
-                },
-                conditionFilter(){
-                    // this.select_Price();
+                    this.store_list=result;
                 },
                 getRandomInt:function(max){
                     return Math.floor(Math.random()*Math.floor(max));
+                },filterData:function(){
+                    
                 }
             }
         })
